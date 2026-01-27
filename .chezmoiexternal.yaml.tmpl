@@ -23,12 +23,14 @@
   exact: true
   stripComponents: 1
   refreshPeriod: 168h
-# '.zsh/plugins/zsh-vi-mode':
-#   type: archive
-#   url: https://github.com/jeffreytse/zsh-vi-mode/archive/refs/heads/master.tar.gz
-#   exact: true
-#   stripComponents: 1
-#   refreshPeriod: 168h
+{{ if false -}}
+'.zsh/plugins/zsh-vi-mode':
+  type: archive
+  url: https://github.com/jeffreytse/zsh-vi-mode/archive/refs/heads/master.tar.gz
+  exact: true
+  stripComponents: 1
+  refreshPeriod: 168h
+{{ end -}}
 '.zsh/plugins/zsh-nvm':
   type: archive
   url: https://github.com/lukechilds/zsh-nvm/archive/refs/heads/master.tar.gz

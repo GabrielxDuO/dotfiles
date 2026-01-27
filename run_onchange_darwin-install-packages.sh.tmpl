@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --file=/dev/stdin << EOF
+{{- $order := list "tap" "brew" "cask" "mas" "vscode" "go" "cargo" "flatpak" }}
+{{- range $key := $order }}
+{{- with index $.packages.darwin.homebrew $key }}
+{{ range . -}}
+{{ $key }} {{ . | quote }}
+{{ end -}}
+{{- end }}
+{{- end }}
+EOF
+{{ end -}}

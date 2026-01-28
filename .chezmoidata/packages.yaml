@@ -32,3 +32,10 @@ packages:
       cask:
         - 'font-symbols-only-nerd-font'
         - 'claude-code' # https://code.claude.com/docs/en/overview#homebrew
+        - 'localsend'
+        - 'bluesnooze'
+        - 'coteditor'
+        - 'font-jetbrains-maple-mono-nf'
+        - 'font-maple-mono-nf-cn'
+        - 'font-ibm-plex-mono'
+        - 'snipaste'

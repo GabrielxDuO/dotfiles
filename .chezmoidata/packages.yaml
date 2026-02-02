@@ -24,9 +24,9 @@ packages:
         - 'wget' # https://formulae.brew.sh/formula/wget
         - 'curl' # https://formulae.brew.sh/formula/curl
         - 'ffmpeg'
-        - 'sevenzip'
-        - 'poppler'
-        - 'resvg'
+        - 'sevenzip' # yazi required
+        - 'poppler' # yazi required
+        - 'resvg' # yazi required
         - 'imagemagick'
         - 'yazi' # https://github.com/sxyazi/yazi#installation
       cask:

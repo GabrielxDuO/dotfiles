@@ -96,4 +96,9 @@ fi
 [[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
 # endregion
 
+# ============================================================================ #
+# region Tealdeer
+# ============================================================================ #
+export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
+# endregion
 

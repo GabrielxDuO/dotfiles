@@ -19,9 +19,7 @@ alias '..'='cd ..'
 alias v='nvim'
 alias pn='pnpm'
 alias gs='git status'
-{{ if eq .chezmoi.os "darwin" -}}
 alias cb='pbcopy'   # MacOS copy to clipboard
-{{ end -}}
 alias md='mkdir -p' # recursive create
 
 # List files aliases

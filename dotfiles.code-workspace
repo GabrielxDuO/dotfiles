@@ -1,11 +1,17 @@
 {
   "folders": [
     {
-      "path": "../../../.zsh",
+      "name": ".config",
+      "path": "../../../.config"
     },
     {
-      "path": ".",
+      "name": ".zsh",
+      "path": "../../../.zsh"
     },
+    {
+      "name": "chezmoi",
+      "path": "."
+    }
   ],
-  "settings": {},
+  "settings": {}
 }

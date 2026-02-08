@@ -29,6 +29,7 @@ packages:
         - 'resvg' # yazi required
         - 'imagemagick'
         - 'yazi' # https://github.com/sxyazi/yazi#installation
+        - 'git-delta' # https://dandavison.github.io/delta/installation.html#installation
       cask:
         - 'font-symbols-only-nerd-font'
         - 'claude-code' # https://code.claude.com/docs/en/overview#homebrew

@@ -69,7 +69,6 @@ fi
 alias -s json=jless
 alias -s md=bat
 alias -s go='$EDITOR'
-alias -s sh='$EDITOR'
 alias -s yaml='$EDITOR'
 alias -s txt=bat
 alias -s log=bat
@@ -97,6 +96,9 @@ alias -g JJ='| jless'
 
 # Copy output to clipboard (macOS)
 alias -g C='| pbcopy'
+
+# More Readable Git Diff
+alias -g D='| delta'
 # endregion
 
 # ============================================================================ #

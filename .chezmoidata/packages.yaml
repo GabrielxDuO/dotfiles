@@ -34,6 +34,7 @@ packages:
       cask:
         - 'kitty'
         - 'karabiner-elements'
+        - 'hammerspoon' # https://github.com/Hammerspoon/hammerspoon#homebrew
         - 'font-symbols-only-nerd-font'
         - 'claude-code' # https://code.claude.com/docs/en/overview#homebrew
         - 'localsend'

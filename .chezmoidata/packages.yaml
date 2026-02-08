@@ -30,6 +30,7 @@ packages:
         - 'imagemagick'
         - 'yazi' # https://github.com/sxyazi/yazi#installation
         - 'git-delta' # https://dandavison.github.io/delta/installation.html#installation
+        - 'neovim' # https://neovim.io/doc/install/#homebrew-on-macos-or-linux
       cask:
         - 'kitty'
         - 'karabiner-elements'

@@ -32,6 +32,7 @@ packages:
         - 'git-delta' # https://dandavison.github.io/delta/installation.html#installation
       cask:
         - 'kitty'
+        - 'karabiner-elements'
         - 'font-symbols-only-nerd-font'
         - 'claude-code' # https://code.claude.com/docs/en/overview#homebrew
         - 'localsend'

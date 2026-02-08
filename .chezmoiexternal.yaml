@@ -24,7 +24,7 @@
   refreshPeriod: 168h
 '.zsh/plugins/zsh-nvm':
   type: archive
-  url: https://github.com/lukechilds/zsh-nvm/archive/refs/heads/master.tar.gz
+  url: https://github.com/lukechilds/zsh-nvm/archive/master.tar.gz
   exact: true
   stripComponents: 1
   refreshPeriod: 168h
@@ -45,4 +45,10 @@
 '.config/yazi/theme.toml':
   type: file
   url: https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-yellow.toml
+  refreshPeriod: 168h
+'.tmux/plugins/tpm':
+  type: archive
+  url: https://github.com/tmux-plugins/tpm/archive/master.tar.gz
+  exact: true
+  stripComponents: 1
   refreshPeriod: 168h

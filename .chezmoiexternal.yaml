@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 '.zsh/plugins/zsh-completions':
   type: archive
   url: https://github.com/zsh-users/zsh-completions/archive/master.tar.gz
@@ -23,14 +22,6 @@
   exact: true
   stripComponents: 1
   refreshPeriod: 168h
-{{ if false -}}
-# '.zsh/plugins/zsh-vi-mode':
-  # type: archive
-  # url: https://github.com/jeffreytse/zsh-vi-mode/archive/refs/heads/master.tar.# gz
-  # exact: true
-  # stripComponents: 1
-  # refreshPeriod: 168h
-{{ end -}}
 '.zsh/plugins/zsh-nvm':
   type: archive
   url: https://github.com/lukechilds/zsh-nvm/archive/refs/heads/master.tar.gz
@@ -41,4 +32,7 @@
   type: file
   url: https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme
   refreshPeriod: 168h
-{{ end -}}
+'.config/kitty/themes/catppuccin-mocha.conf':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf
+  refreshPeriod: 168h

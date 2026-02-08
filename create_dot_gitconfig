@@ -1,0 +1,24 @@
+[user]
+	name = GabrielxD
+	email = gabrielxduo@outlook.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+	excludesfile = /Users/gabrielxd/.gitignore_global
+	quotepath = false
+	ignorecase = false
+[alias]
+	graph = log --all --graph --decorate --oneline
+[i18n]
+	logoutputencoding = utf-8
+[safe]
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
+[color]
+	ui = auto

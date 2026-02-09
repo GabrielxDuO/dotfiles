@@ -46,3 +46,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply GabrielxDuO
 - **External dependencies**: Zsh plugins, themes, and Neovim config are fetched and kept up-to-date via `.chezmoiexternal.yaml`.
 - **Templates**: `.tmpl` files use chezmoi's templating (Go templates + [Sprig](https://masterminds.github.io/sprig/)) for OS-specific and conditional logic.
 - **Runtime detection**: Development tool environments (pyenv, goenv, jenv, etc.) are loaded conditionally using `command -v` checks — no hard dependency on the package list.
+
+## More Information
+
+Move to [chezmoi docs](https://www.chezmoi.io/).

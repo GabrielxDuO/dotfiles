@@ -31,10 +31,10 @@ My personal dotfiles managed with [chezmoi](https://www.chezmoi.io/), mainly tar
 3. Apply changes verbosely:
 
    ```bash
-   chezmoi appply -v
+   chezmoi apply -v
    ```
 
-Or you can a single command to install chezmoi and the dotfiles(Not recommended):
+Or you can a single command to install chezmoi and the dotfiles (Not recommended):
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply GabrielxDuO

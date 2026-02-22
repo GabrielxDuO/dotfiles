@@ -5,32 +5,35 @@
 # [[ -n "$ZSH_DEBUGRC" ]] && zmodload zsh/zprof # must be kept to the most top
 
 # ============================================================================ #
+# region Zsh configuration directory
+# ============================================================================ #
+ZSH_CONFIG="$HOME/.zsh"
+# endregion
+
+# ============================================================================ #
 # region Zsh plugin: zsh-vi-mode (manual install)
 # ============================================================================ #
 # https://github.com/jeffreytse/zsh-vi-mode#manually
 # using default vi mode instead is enough for me
-# source ~/.zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# source "$ZSH_CONFIG/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 # endregion
-
 
 # ============================================================================ #
 # region Zsh plugin: zsh-completions (manual install)
 # ============================================================================ #
 # https://github.com/zsh-users/zsh-completions#manual-installation
-fpath=(~/.zsh/plugins/zsh-completions/src $fpath)
+fpath=("$ZSH_CONFIG/plugins/zsh-completions/src" $fpath)
 
 # Add homebrew to fpath for zsh completions
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 # endregion
 
-
 # ============================================================================ #
 # region Zsh plugin: zsh-autosuggestions (manual install)
 # ============================================================================ #
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#manual-git-clone
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$ZSH_CONFIG/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # endregion
-
 
 # ============================================================================ #
 # region fzf (installed with homebrew)
@@ -80,40 +83,36 @@ _fzf_comprun() {
 }
 # endregion
 
-
 # ============================================================================ #
 # region Zsh plugin: fzf-tab (manual install)
 # ============================================================================ #
 # https://github.com/Aloxaf/fzf-tab#manual
-source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+source "$ZSH_CONFIG/plugins/fzf-tab/fzf-tab.plugin.zsh"
 # endregion
-
 
 # ============================================================================ #
 # region SSH agent
 # ============================================================================ #
 # Start SSH agent if not running
 if [ -z "$SSH_AUTH_SOCK" ] || [ ! -e "$SSH_AUTH_SOCK" ]; then
-    # Start ssh-agent and save environment variables to ~/.ssh/agent.env
-    ssh-agent -s > ~/.ssh/agent.env
-    eval "$(<~/.ssh/agent.env)" >/dev/null
+  # Start ssh-agent and save environment variables to ~/.ssh/agent.env
+  ssh-agent -s > ~/.ssh/agent.env
+  eval "$(<~/.ssh/agent.env)" >/dev/null
 fi
 
 # Check if keys are already loaded
 ssh-add -l &>/dev/null
 if [ $? -eq 1 ]; then
-    # Load SSH keys with keychain integration
-    ssh-add --apple-use-keychain ~/.ssh/id_ed25519_GabPC 2>/dev/null
+  # Load SSH keys with keychain integration
+  ssh-add --apple-use-keychain ~/.ssh/id_ed25519_GabPC 2>/dev/null
 fi
 # endregion
 
-
 # ============================================================================ #
-# region Load envs
+# region Load environment variables
 # ============================================================================ #
-source ~/.zsh/env.sh
+source "$ZSH_CONFIG/env.sh"
 # endregion
-
 
 # ============================================================================ #
 # region Zsh configurations
@@ -133,7 +132,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always $real
 zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -1 --icons --color=always $realpath'
 
 # History (for `zsh-autosuggestions`)
-HISTFILE=~/.zsh_history
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1048576
 SAVEHIST=$HISTSIZE
 HISDUP=erase # erase duplicates in history file
@@ -160,25 +159,22 @@ export KEYTIMEOUT=1 # reduce delay after pressing ESC in vim mode
 alias r='echo "r is disabled. Use !! instead."'
 # endregion
 
-
 # ============================================================================ #
 # region Load external configuration files
 # ============================================================================ #
-source ~/.zsh/aliases.sh
-source ~/.zsh/key_bindings.sh
-source ~/.zsh/hooks.sh
-source ~/.zsh/secrets.sh
+source "$ZSH_CONFIG/aliases.sh"
+source "$ZSH_CONFIG/key_bindings.sh"
+source "$ZSH_CONFIG/hooks.sh"
+source "$ZSH_CONFIG/secrets.sh"
 # endregion
-
 
 # ============================================================================ #
 # region Zsh plugin: zsh-syntax-highlighting (manual install)
 # ============================================================================ #
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#in-your-zshrc
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # required to be at the end
+source "$ZSH_CONFIG/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" # required to be at the end
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 # endregion
-
 
 # ============================================================================ #
 # region zoxide (installed with homebrew)
@@ -187,7 +183,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
 eval "$(zoxide init zsh)" # required to be at the end
 # endregion
 
-
 # ============================================================================ #
 # region starship (installed with homebrew)
 # ============================================================================ #
@@ -195,14 +190,12 @@ eval "$(zoxide init zsh)" # required to be at the end
 eval "$(starship init zsh)"
 # endregion
 
-
 # ============================================================================ #
 # region thefuck (installed with homebrew)
 # ============================================================================ #
 # https://github.com/nvbn/thefuck#installation
 eval $(thefuck --alias)
 # endregion
-
 
 # [[ -n "$ZSH_DEBUGRC" ]] && zprof # must be kept to the most end
 {{ end -}}

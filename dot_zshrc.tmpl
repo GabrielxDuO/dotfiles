@@ -111,7 +111,7 @@ fi
 # ============================================================================ #
 # region Load environment variables
 # ============================================================================ #
-source "$ZSH_CONFIG/env.sh"
+source "$ZSH_CONFIG/env.zsh"
 # endregion
 
 # ============================================================================ #
@@ -162,10 +162,10 @@ alias r='echo "r is disabled. Use !! instead."'
 # ============================================================================ #
 # region Load external configuration files
 # ============================================================================ #
-source "$ZSH_CONFIG/aliases.sh"
-source "$ZSH_CONFIG/key_bindings.sh"
-source "$ZSH_CONFIG/hooks.sh"
-source "$ZSH_CONFIG/secrets.sh"
+source "$ZSH_CONFIG/aliases.zsh"
+source "$ZSH_CONFIG/key_bindings.zsh"
+source "$ZSH_CONFIG/hooks.zsh"
+[[ -f "$ZSH_CONFIG/local.zsh" ]] && source "$ZSH_CONFIG/local.zsh"
 # endregion
 
 # ============================================================================ #

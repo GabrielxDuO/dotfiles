@@ -91,24 +91,6 @@ source "$ZSH_CONFIG/plugins/fzf-tab/fzf-tab.plugin.zsh"
 # endregion
 
 # ============================================================================ #
-# region SSH agent
-# ============================================================================ #
-# Start SSH agent if not running
-if [ -z "$SSH_AUTH_SOCK" ] || [ ! -e "$SSH_AUTH_SOCK" ]; then
-  # Start ssh-agent and save environment variables to ~/.ssh/agent.env
-  ssh-agent -s > ~/.ssh/agent.env
-  eval "$(<~/.ssh/agent.env)" >/dev/null
-fi
-
-# Check if keys are already loaded
-ssh-add -l &>/dev/null
-if [ $? -eq 1 ]; then
-  # Load SSH keys with keychain integration
-  ssh-add --apple-use-keychain ~/.ssh/id_ed25519_GabPC 2>/dev/null
-fi
-# endregion
-
-# ============================================================================ #
 # region Load environment variables
 # ============================================================================ #
 source "$ZSH_CONFIG/env.zsh"

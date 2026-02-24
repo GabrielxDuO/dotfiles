@@ -102,3 +102,8 @@ fi
 export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
 # endregion
 
+# ============================================================================ #
+# region simonw/llm
+# ============================================================================ #
+export LLM_USER_PATH="$HOME/.config/io.datasette.llm"
+# endregion

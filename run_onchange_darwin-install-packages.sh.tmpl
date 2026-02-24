@@ -1,14 +1,56 @@
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-brew bundle --file=/dev/stdin << EOF
-{{- $order := list "tap" "brew" "cask" "mas" "vscode" "go" "cargo" "flatpak" }}
-{{- range $key := $order }}
-{{- with index $.packages.darwin.homebrew $key }}
-{{ range . -}}
-{{ $key }} {{ . | quote }}
-{{ end -}}
-{{- end }}
-{{- end }}
+brew bundle --file=/dev/stdin <<EOF
+tap "oven-sh/bun"
+
+brew "git"
+brew "fzf"
+brew "zoxide"
+brew "starship"
+brew "thefuck"
+brew "neovim"
+brew "oven-sh/bun/bun"
+brew "deno"
+brew "bat"
+brew "eza"
+brew "rmtrash"
+brew "fd"
+brew "jless"
+brew "jq"
+brew "ripgrep"
+brew "tealdeer"
+brew "tmux"
+brew "wget"
+brew "curl"
+brew "ffmpeg"
+brew "sevenzip"
+brew "poppler"
+brew "resvg"
+brew "imagemagick"
+brew "yazi"
+brew "git-delta"
+brew "neovim"
+
+cask "kitty"
+cask "karabiner-elements"
+cask "hammerspoon"
+cask "snipaste"
+cask "claude-code"
+cask "localsend"
+cask "bluesnooze"
+cask "coteditor"
+cask "iina"
+cask "localsend"
+cask "jordanbaird-ice"
+cask "quickrecorder"
+cask "orbstack"
+cask "switchhosts"
+cask "typora"
+cask "visual-studio-code"
+cask "font-symbols-only-nerd-font"
+cask "font-jetbrains-maple-mono-nf"
+cask "font-maple-mono-nf-cn"
+cask "font-ibm-plex-mono"
 EOF
 {{ end -}}

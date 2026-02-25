@@ -1,0 +1,57 @@
+# see https://github.com/sigoden/aichat/blob/main/config.example.yaml
+
+save_shell_history: true
+clients:
+  - type: openai-compatible
+    name: bailian
+    api_base: https://dashscope.aliyuncs.com/compatible-mode/v1
+    models:
+      - name: qwen3-coder-next
+        max_input_tokens: 200000
+      - name: qwen3-coder-plus
+        max_input_tokens: 997000
+        supports_function_calling: true
+      - name: qwen3-coder-flash
+        max_input_tokens: 997000
+        supports_function_calling: true
+      - name: qwen3.5-plus
+        max_input_tokens: 983000
+        supports_vision: true
+        supports_function_calling: true
+        patch:
+          body:
+            enable_thinking: false
+      - name: qwen3.5-plus:thinking
+        real_name: qwen3.5-plus
+        max_input_tokens: 983000
+        supports_reasoning: true
+        supports_vision: true
+        supports_function_calling: true
+      - name: qwen3.5-flash
+        max_input_tokens: 983000
+        supports_reasoning: true
+        supports_vision: true
+        supports_function_calling: true
+      - name: qwen3-max
+        max_input_tokens: 252000
+        supports_reasoning: true
+        supports_function_calling: true
+      - name: qwen-plus
+        max_input_tokens: 995000
+        supports_reasoning: true
+        supports_function_calling: true
+      - name: qwen-max
+        max_input_tokens: 30000
+        supports_function_calling: true
+      - name: qwen-turbo
+        max_input_tokens: 96000
+        supports_reasoning: true
+      - name: kimi-k2.5
+        max_input_tokens: 224000
+        supports_reasoning: true
+        supports_vision: true
+        supports_function_calling: true
+      - name: minimax-m2.5
+        max_input_tokens: 192000
+        supports_vision: true
+        supports_function_calling: true

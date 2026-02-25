@@ -60,6 +60,9 @@ fi
 if command -v yt-dlp &>/dev/null; then
   alias ytd='yt-dlp --cookies ~/.cookies/www.youtube.com_cookies.txt'
 fi
+
+# aichat
+alias ai='aichat'
 # endregion
 
 # ============================================================================ #

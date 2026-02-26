@@ -24,7 +24,7 @@ export NVM_COMPLETION=true
 source ~/.zsh/plugins/zsh-nvm/zsh-nvm.plugin.zsh
 
 # pnpm (pnpm setup)
-export PNPM_HOME="/Users/gabrielxd/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

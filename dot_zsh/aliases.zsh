@@ -19,8 +19,8 @@ alias '..'='cd ..'
 alias v='nvim'
 alias pn='pnpm'
 alias gs='git status'
-alias cb='pbcopy'   # MacOS copy to clipboard
-alias md='mkdir -p' # recursive create
+alias cb='pbcopy' # MacOS: copy to clipboard
+alias mkd='mkdir -p' # make directory recursively
 
 # List files aliases
 alias l='eza --icons'
@@ -57,9 +57,7 @@ if command -v docker &>/dev/null; then
 fi
 
 # yt-dlp
-if command -v yt-dlp &>/dev/null; then
-  alias ytd='yt-dlp --cookies ~/.cookies/www.youtube.com_cookies.txt'
-fi
+command -v yt-dlp &>/dev/null && alias ytd="yt-dlp --cookies $HOME/.cookies/www.youtube.com_cookies.txt"
 
 # aichat
 alias ai='aichat'

@@ -16,10 +16,10 @@ My personal dotfiles managed with [chezmoi](https://www.chezmoi.io/), mainly tar
    chezmoi init https://github.com/GabrielxDuO/dotfiles.git
    ```
 
-   Or use a shorter link:
+   Or use a shorter alias:
 
    ```bash
-   chezmoi init https://dotfiles.gab.moe
+   chezmoi init GabrielxDuO
    ```
 
 2. Check what changes that chezmoi will make:

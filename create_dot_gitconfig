@@ -13,6 +13,11 @@
 	excludesfile = ~/.gitignore_global
 	quotepath = false
 	ignorecase = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictStyle = zdiff3
 [alias]
 	graph = log --all --graph --decorate --oneline
 [i18n]

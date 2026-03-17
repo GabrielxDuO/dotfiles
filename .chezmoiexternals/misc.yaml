@@ -1,0 +1,28 @@
+'.config/yazi/theme.toml':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-yellow.toml
+  refreshPeriod: 168h
+'.config/bat/themes/Catppuccin Mocha.tmTheme':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme
+  refreshPeriod: 168h
+'.config/kitty/themes/catppuccin-mocha.conf':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/kitty/main/themes/mocha.conf
+  refreshPeriod: 168h
+'.config/nvim':
+  type: archive
+  url: https://github.com/LazyVim/starter/archive/main.tar.gz
+  exact: false
+  stripComponents: 1
+  refreshPeriod: 168h
+'.tmux/plugins/tpm':
+  type: archive
+  url: https://github.com/tmux-plugins/tpm/archive/master.tar.gz
+  exact: true
+  stripComponents: 1
+  refreshPeriod: 168h
+'.config/glow/themes/catppuccin-mocha.json':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json
+  refreshPeriod: 168h

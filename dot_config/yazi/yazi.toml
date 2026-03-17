@@ -9,3 +9,11 @@ edit = [
 	{ run = "code %s", desc = "code", for = "unix", orphan = true },
 	{ run = "code -w %s", desc = "code (block)", for = "unix", block = true },
 ]
+glow = [
+	{ run = "glow --tui %s", block = true, for = "unix" },
+]
+
+[open]
+prepend_rules = [
+	{ url = "*.md", use = "glow" },
+]

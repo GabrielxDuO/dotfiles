@@ -97,13 +97,22 @@ fi
 # endregion
 
 # ============================================================================ #
+# region XDG Base Directory Specification
+# ============================================================================ #
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+# endregion
+
+# ============================================================================ #
 # region Tealdeer
 # ============================================================================ #
 export TEALDEER_CONFIG_DIR="$HOME/.config/tealdeer"
 # endregion
 
 # ============================================================================ #
-# region aichat
+# region Glow
 # ============================================================================ #
-export AICHAT_CONFIG_DIR="$HOME/.config/aichat"
+export GLOW_STYLE="$HOME/.config/glow/themes/catppuccin-mocha.json"
 # endregion

@@ -1,17 +1,17 @@
--- 设置要切换的终端模拟器的 Bundle ID
--- local TERMINAL_BUNDLE_ID = "com.apple.Terminal"
--- local TERMINAL_BUNDLE_ID = "org.alacritty"
--- local TERMINAL_BUNDLE_ID = "com.github.wez.wezterm"
+-- opt + space 切换终端
+-- "com.apple.Terminal"
+-- "org.alacritty"
+-- "com.github.wez.wezterm"
+-- "com.mitchellh.ghostty"
 local TERMINAL_BUNDLE_ID = "net.kovidgoyal.kitty"
 
 hs.hotkey.bind({ "option" }, "space", function()
-	local terminalApp = hs.application.get(TERMINAL_BUNDLE_ID)
-
-	if not terminalApp or not terminalApp:mainWindow() then
+	local app = hs.application.get(TERMINAL_BUNDLE_ID)
+	if not app or not app:mainWindow() then
 		hs.application.launchOrFocusByBundleID(TERMINAL_BUNDLE_ID)
-	elseif terminalApp:isFrontmost() then
-		terminalApp:hide()
+	elseif app:isFrontmost() then
+		app:hide()
 	else
-		terminalApp:activate()
+		app:activate()
 	end
 end)

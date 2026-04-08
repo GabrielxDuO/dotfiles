@@ -26,3 +26,13 @@
   type: file
   url: https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json
   refreshPeriod: 168h
+'.config/ghostty/themes/catppuccin-mocha.conf':
+  type: file
+  url: https://raw.githubusercontent.com/catppuccin/ghostty/main/themes/catppuccin-mocha.conf
+  refreshPeriod: 168h
+'.config/ghostty/shaders':
+  type: archive
+  url: https://github.com/sahaj-b/ghostty-cursor-shaders/archive/main.tar.gz
+  exact: true
+  stripComponents: 1
+  refreshPeriod: 168h

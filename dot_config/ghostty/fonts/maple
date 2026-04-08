@@ -1,0 +1,5 @@
+font-family = Maple Mono NF CN
+font-feature = -calt, +zero, +cv01, +ss01, +ss02, +ss04, +cv35
+font-thicken = true
+
+adjust-cell-height = 5%

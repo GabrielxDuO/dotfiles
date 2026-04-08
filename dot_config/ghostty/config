@@ -1,0 +1,47 @@
+# ============================================================================ #
+# region Theme
+# ============================================================================ #
+theme = catppuccin-mocha.conf
+# endregion
+
+
+# ============================================================================ #
+# region Fonts
+# ============================================================================ #
+config-file = fonts/maple
+font-size = 15.0
+# endregion
+
+
+# ============================================================================ #
+# region Text cursor customization
+# ============================================================================ #
+custom-shader = shaders/cursor_tail.glsl
+# endregion
+
+
+# ============================================================================ #
+# region Window layout
+# ============================================================================ #
+window-save-state = never
+
+window-width = 110
+window-height = 30
+
+window-padding-x = 12
+window-padding-balance = true
+
+confirm-close-surface = false
+
+window-inherit-working-directory = false
+tab-inherit-working-directory = true
+# endregion
+
+
+# ============================================================================ #
+# region Background
+# ============================================================================ #
+background-opacity = 0.76
+background-opacity-cells = true # ghostty 的半透明渲染与 kitty 相比仍有较大问题（打开 neovim 可明显发现），这是我目前即使配好了也不主用 ghostty 的主要原因
+background-blur = true
+# endregion

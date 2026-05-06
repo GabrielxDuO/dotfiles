@@ -14,20 +14,20 @@ clients:
       - name: qwen3-coder-flash
         max_input_tokens: 997000
         supports_function_calling: true
-      - name: qwen3.5-plus
+      - name: qwen3.6-plus
         max_input_tokens: 983000
         supports_vision: true
         supports_function_calling: true
         patch:
           body:
             enable_thinking: false
-      - name: qwen3.5-plus:thinking
-        real_name: qwen3.5-plus
+      - name: qwen3.6-plus:thinking
+        real_name: qwen3.6-plus
         max_input_tokens: 983000
         supports_reasoning: true
         supports_vision: true
         supports_function_calling: true
-      - name: qwen3.5-flash
+      - name: qwen3.6-flash
         max_input_tokens: 983000
         supports_reasoning: true
         supports_vision: true
@@ -46,7 +46,7 @@ clients:
       - name: qwen-turbo
         max_input_tokens: 96000
         supports_reasoning: true
-      - name: kimi-k2.5
+      - name: kimi-k2.6
         max_input_tokens: 224000
         supports_reasoning: true
         supports_vision: true
@@ -54,4 +54,8 @@ clients:
       - name: minimax-m2.5
         max_input_tokens: 192000
         supports_vision: true
+        supports_function_calling: true
+      - name: deepseek-v4-flash
+        max_input_tokens: 1000000
+        supports_reasoning: true
         supports_function_calling: true

@@ -61,6 +61,9 @@ command -v yt-dlp &>/dev/null && alias ytd="yt-dlp --cookies $HOME/.cookies/www.
 
 # aichat
 alias ai='aichat'
+
+# mise
+alias x='mise exec'
 # endregion
 
 # ============================================================================ #

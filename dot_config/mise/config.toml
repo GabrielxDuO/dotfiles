@@ -1,0 +1,10 @@
+[tools]
+bun = "latest"
+deno = "latest"
+go = "latest"
+java = "temurin-21"
+node = "lts"
+python = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]

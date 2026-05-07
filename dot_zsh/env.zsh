@@ -17,63 +17,18 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # ============================================================================ #
 # region Node.js
 # ============================================================================ #
-# nvm: https://github.com/lukechilds/zsh-nvm#manually
-export NVM_LAZY_LOAD=true
-export NVM_AUTO_USE=true
-export NVM_COMPLETION=true
-source ~/.zsh/plugins/zsh-nvm/zsh-nvm.plugin.zsh
-
 # pnpm (pnpm setup)
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-
-# Bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Deno
-# https://docs.deno.com/runtime/getting_started/setup_your_environment/#zsh-example
-fpath=(~/.zsh $fpath)
 # endregion
 
 # ============================================================================ #
-# region Java
+# region mise
 # ============================================================================ #
-# jEnv
-if command -v jenv &>/dev/null; then
-  export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
-fi
-
-# Tomcat
-[[ -d /opt/homebrew/opt/tomcat@9 ]] && export PATH="/opt/homebrew/opt/tomcat@9/bin:$PATH"
-# endregion
-
-# ============================================================================ #
-# region Python
-# ============================================================================ #
-# PyEnv
-if command -v pyenv &>/dev/null; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-# endregion
-
-# ============================================================================ #
-# region Golang
-# ============================================================================ #
-# GoEnv
-if command -v goenv &>/dev/null; then
-  export GOENV_ROOT="$HOME/.goenv"
-  export PATH="$GOENV_ROOT/bin:$PATH"
-  eval "$(goenv init -)"
-  export PATH="$GOROOT/bin:$PATH"
-  export PATH="$PATH:$GOPATH/bin"
-fi
+eval "$(mise activate zsh)"
 # endregion
 
 # ============================================================================ #
@@ -84,14 +39,7 @@ fi
 # endregion
 
 # ============================================================================ #
-# region PHP
-# ============================================================================ #
-[[ -d /opt/homebrew/opt/php@7.3 ]] && export PATH="/opt/homebrew/opt/php@7.3/bin:$PATH"
-[[ -d /opt/homebrew/opt/php@7.3 ]] && export PATH="/opt/homebrew/opt/php@7.3/sbin:$PATH"
-# endregion
-
-# ============================================================================ #
-# region Cursor CLI
+# region XDG Style Binaries
 # ============================================================================ #
 [[ -d $HOME/.local/bin ]] && export PATH="$HOME/.local/bin:$PATH"
 # endregion

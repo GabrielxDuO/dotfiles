@@ -42,22 +42,20 @@ alias abrew='arch -arm64e /opt/homebrew/bin/brew'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # Docker Compose
-if command -v docker &>/dev/null; then
-  alias dc='docker compose'
-  alias dcu='docker compose up -d'
-  alias dcd='docker compose down'
-  alias dcst='docker compose start'
-  alias dcsp='docker compose stop'
-  alias dcr='docker compose restart'
-  alias dcp='docker compose pull'
-  alias dcps='docker compose ps'
-  alias dcl='docker compose logs'
-  alias dcx='docker compose exec'
-  alias dcb='docker compose build'
-fi
+alias dc='docker compose'
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
+alias dcst='docker compose start'
+alias dcsp='docker compose stop'
+alias dcr='docker compose restart'
+alias dcp='docker compose pull'
+alias dcps='docker compose ps'
+alias dcl='docker compose logs'
+alias dcx='docker compose exec'
+alias dcb='docker compose build'
 
 # yt-dlp
-command -v yt-dlp &>/dev/null && alias ytd="yt-dlp --cookies $HOME/.cookies/www.youtube.com_cookies.txt"
+alias ytd="yt-dlp --cookies $HOME/.cookies/www.youtube.com_cookies.txt"
 
 # aichat
 alias ai='aichat'

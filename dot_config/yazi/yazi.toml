@@ -18,12 +18,3 @@ prepend_rules = [
 	{ url = "*.md", use = "glow" },
 ]
 
-[[plugin.prepend_fetchers]]
-id  = "git"
-url = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id  = "git"
-url = "*/"
-run = "git"

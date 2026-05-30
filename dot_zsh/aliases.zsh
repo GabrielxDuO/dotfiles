@@ -21,6 +21,7 @@ alias pn='pnpm'
 alias gs='git status'
 alias cb='pbcopy' # MacOS: copy to clipboard
 alias mkd='mkdir -p' # make directory recursively
+alias codi='codium'
 
 # List files aliases
 alias l='eza --icons'

@@ -8,8 +8,6 @@ node = "lts"
 python = "latest"
 "npm:prettier" = "latest"
 "npm:whistle" = "latest"
-"npm:picgo" = "latest"
-"npm:portless" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

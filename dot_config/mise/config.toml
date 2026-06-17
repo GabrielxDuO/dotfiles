@@ -8,6 +8,7 @@ node = "lts"
 python = "latest"
 "npm:prettier" = "latest"
 "npm:whistle" = "latest"
+"npm:@rizumu/nai" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]

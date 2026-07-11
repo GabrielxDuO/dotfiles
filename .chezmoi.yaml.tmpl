@@ -1,2 +1,6 @@
+{{- if not (lookPath "delta") -}}
+{{- warnf "git-delta not found; installing it with Homebrew...\n" -}}
+{{- $_ := output "brew" "install" "git-delta" -}}
+{{- end -}}
 diff:
   pager: delta

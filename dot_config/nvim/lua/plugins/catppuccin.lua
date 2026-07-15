@@ -2,7 +2,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
     priority = 1000,
     opts = {
       -- configurations
@@ -13,7 +13,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }

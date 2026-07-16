@@ -43,6 +43,5 @@ tab-inherit-working-directory = true
 # ============================================================================ #
 background-opacity = 0.76
 background-opacity-cells = false
-# ghostty 的半透明渲染与 kitty 相比仍有较大问题（打开 neovim 可明显发现），这是我目前即使配好了也不主用 ghostty 的主要原因
 background-blur = 30
 # endregion

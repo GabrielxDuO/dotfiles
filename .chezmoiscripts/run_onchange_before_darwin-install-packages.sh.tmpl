@@ -1,11 +1,12 @@
 {{- if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
-set -eufo pipefail
+#!/bin/sh
+set -eu
 
-brew bundle --file=/dev/stdin <<EOF
-tap "localsend/localsend"
-tap "lihaoyun6/tap"
-
+brew bundle \
+  --verbose \
+  --jobs=auto \
+  --no-upgrade \
+  --file=/dev/stdin <<EOF
 brew "git"
 brew "fzf"
 brew "zoxide"

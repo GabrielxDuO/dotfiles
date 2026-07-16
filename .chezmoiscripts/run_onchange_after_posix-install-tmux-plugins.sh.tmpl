@@ -1,0 +1,7 @@
+{{- if has .chezmoi.os (list "darwin" "linux" "freebsd" "openbsd" "netbsd") -}}
+#!/bin/sh
+set -eu
+
+# tmux.conf: {{ include "dot_tmux.conf" | sha256sum }}
+"$HOME/.tmux/plugins/tpm/bin/install_plugins"
+{{ end -}}

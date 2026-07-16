@@ -42,6 +42,6 @@ tab-inherit-working-directory = true
 # region Background
 # ============================================================================ #
 background-opacity = 0.76
-background-opacity-cells = false
+background-opacity-cells = true
 background-blur = 30
 # endregion

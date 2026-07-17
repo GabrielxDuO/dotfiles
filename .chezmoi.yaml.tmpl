@@ -1,6 +1,6 @@
-{{- if not (lookPath "diffnav") -}}
-{{- warnf "diffnav not found; installing it with Homebrew...\n" -}}
-{{- $_ := output "brew" "install" "diffnav" -}}
-{{- end -}}
 diff:
   pager: diffnav
+hooks:
+  diff:
+    read-source-state:
+      command: {{ joinPath .chezmoi.sourceDir ".install-bootstrap-dependencies.sh" | quote }}

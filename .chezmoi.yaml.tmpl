@@ -4,3 +4,7 @@ hooks:
   diff:
     read-source-state:
       command: {{ joinPath .chezmoi.sourceDir ".install-bootstrap-dependencies.sh" | quote }}
+data:
+  {{- if eq .chezmoi.os "darwin" }}
+  macosVersion: {{ output "sw_vers" "-productVersion" | trim | quote }}
+  {{- end }}

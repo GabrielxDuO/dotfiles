@@ -44,7 +44,7 @@ cask "bluesnooze"
 cask "coteditor"
 cask "iina"
 cask "localsend/localsend/localsend", trusted: true
-cask "jordanbaird-ice"
+cask "jordanbaird-ice{{ if semverCompare ">=26" .macosVersion }}@beta{{ end }}"
 cask "lihaoyun6/tap/quickrecorder", trusted: true
 cask "orbstack"
 cask "switchhosts"

@@ -45,3 +45,11 @@ background-opacity = 0.76
 background-opacity-cells = true
 background-blur = 30
 # endregion
+
+
+# ============================================================================ #
+# region OS specific tweaks
+# ============================================================================ #
+# OS specific tweaks
+macos-option-as-alt = true
+# endregion

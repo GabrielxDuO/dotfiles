@@ -35,7 +35,9 @@ brew "git-lfs"
 brew "aichat"
 brew "mise"
 brew "glow"
-{{ if eq .environment "work" }}colima{{ end }}
+{{- if eq .environment "work" }}
+brew "colima"
+{{ end -}}
 
 cask "kitty"
 cask "karabiner-elements"
@@ -48,7 +50,9 @@ cask "iina"
 cask "localsend/localsend/localsend", trusted: true
 cask "jordanbaird-ice{{ if semverCompare ">=26" .macosVersion }}@beta{{ end }}"
 cask "lihaoyun6/tap/quickrecorder", trusted: true
-{{ if eq .environment "personal" }}cask "orbstack"{{ end }}
+{{- if eq .environment "personal" }}
+cask "orbstack"
+{{ end -}}
 cask "switchhosts"
 cask "typora"
 cask "visual-studio-code"

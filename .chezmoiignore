@@ -3,3 +3,8 @@ dotfiles.code-workspace
 README.md
 
 .zsh/local.zsh
+
+{{- if ne .chezmoi.os "darwin" -}}
+.config/homebrew
+.chezmoiscripts/run_onchange_before_darwin-install-packages.sh.tmpl
+{{ end -}}

@@ -14,6 +14,8 @@
 	quotepath = false
 	ignorecase = false
 	pager = delta
+[pager]
+	diff = diffnav
 [interactive]
 	diffFilter = delta --color-only
 [merge]

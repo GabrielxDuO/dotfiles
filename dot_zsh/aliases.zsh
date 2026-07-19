@@ -102,4 +102,5 @@ alias -g C='| pbcopy'
 
 # More Readable Git Diff
 alias -g D='| delta'
+alias -g DN='| diffnav'
 # endregion

@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 set -eu
 
@@ -5,4 +6,60 @@ brew bundle \
   --verbose \
   --jobs auto \
   --no-upgrade \
-  --file {{ joinPath .chezmoi.homeDir ".config/homebrew/Brewfile" | quote }}
+  --file /dev/stdin <<EOF
+brew "git"
+brew "fzf"
+brew "zoxide"
+brew "starship"
+brew "neovim"
+brew "bat"
+brew "eza"
+brew "rmtrash"
+brew "fd"
+brew "jless"
+brew "jq"
+brew "ripgrep"
+brew "tealdeer"
+brew "tmux"
+brew "wget"
+brew "curl"
+brew "ffmpeg"
+brew "sevenzip"
+brew "poppler"
+brew "resvg"
+brew "imagemagick"
+brew "yazi"
+brew "git-delta"
+brew "diffnav"
+brew "git-lfs"
+brew "aichat"
+brew "mise"
+brew "glow"
+{{ if eq .environment "work" }}colima{{ end }}
+
+cask "kitty"
+cask "karabiner-elements"
+cask "hammerspoon"
+cask "snipaste"
+cask "codex"
+cask "bluesnooze"
+cask "coteditor"
+cask "iina"
+cask "localsend/localsend/localsend", trusted: true
+cask "jordanbaird-ice{{ if semverCompare ">=26" .macosVersion }}@beta{{ end }}"
+cask "lihaoyun6/tap/quickrecorder", trusted: true
+{{ if eq .environment "personal" }}cask "orbstack"{{ end }}
+cask "switchhosts"
+cask "typora"
+cask "visual-studio-code"
+cask "rectangle"
+cask "mac-mouse-fix"
+cask "monitorcontrol"
+cask "ghostty"
+# Fonts
+cask "font-symbols-only-nerd-font"
+cask "font-jetbrains-maple-mono-nf"
+cask "font-maple-mono-nf-cn"
+cask "font-ibm-plex-mono"
+EOF
+{{ end -}}

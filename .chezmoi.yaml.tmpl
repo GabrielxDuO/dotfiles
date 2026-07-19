@@ -5,6 +5,7 @@ hooks:
     read-source-state:
       command: {{ joinPath .chezmoi.sourceDir ".install-bootstrap-dependencies.sh" | quote }}
 data:
+  environment: {{ promptChoiceOnce . "environment" "Select environment" (list "personal" "work") "personal" | quote }}
   {{- if eq .chezmoi.os "darwin" }}
   macosVersion: {{ output "sw_vers" "-productVersion" | trim | quote }}
   {{- end }}

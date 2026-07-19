@@ -47,7 +47,7 @@ cask "iina"
 cask "localsend/localsend/localsend", trusted: true
 cask "jordanbaird-ice{{ if semverCompare ">=26" .macosVersion }}@beta{{ end }}"
 cask "lihaoyun6/tap/quickrecorder", trusted: true
-cask "orbstack"
+cask "{{ if eq .environment "personal" }}orbstack{{ else if eq .environment "work" }}colima{{ end }}"
 cask "switchhosts"
 cask "typora"
 cask "visual-studio-code"

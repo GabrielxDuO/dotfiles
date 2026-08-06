@@ -70,14 +70,11 @@ alias x='mise exec'
 # ============================================================================ #
 # Just type the filename to open it with the associated program
 alias -s json=jless
-alias -s md=bat
+alias -s md='glow -t'
 alias -s go='$EDITOR'
 alias -s yaml='$EDITOR'
 alias -s txt=bat
 alias -s log=bat
-alias -s py='$EDITOR'
-alias -s js='$EDITOR'
-alias -s ts='$EDITOR'
 alias -s html=open # macOS: open in default browser
 # endregion
 

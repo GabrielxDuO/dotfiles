@@ -9,7 +9,7 @@ theme = catppuccin-mocha.conf
 # region Fonts
 # ============================================================================ #
 config-file = fonts/maple
-font-size = 15.0
+font-size = 14.0
 # endregion
 
 
@@ -25,8 +25,8 @@ custom-shader = shaders/cursor_tail.glsl
 # ============================================================================ #
 window-save-state = never
 
-window-width = 110
-window-height = 30
+window-width = 140
+window-height = 35
 
 window-padding-x = 12
 window-padding-balance = true

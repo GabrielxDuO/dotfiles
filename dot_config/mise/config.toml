@@ -1,13 +1,12 @@
 [tools]
-bun = "latest"
+node = "lts"
+pnpm = "latest"
 deno = "latest"
+bun = "latest"
 go = "latest"
 java = "temurin-21"
-node = "lts"
-"npm:@antfu/ni" = "latest"
 python = "latest"
-"npm:prettier" = "latest"
-"npm:whistle" = "latest"
+"npm:@antfu/ni" = "latest"
 "npm:@rizumu/nai" = "latest"
 
 [settings]

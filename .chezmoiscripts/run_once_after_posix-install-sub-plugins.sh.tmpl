@@ -7,4 +7,7 @@ set -eu
 
 # yazi/package.toml: {{ include "dot_config/yazi/package.toml" | sha256sum }}
 ya pkg install
+
+# mise/config.toml: {{ include "dot_config/mise/config.toml" | sha256sum }}
+mise install --yes
 {{ end -}}

@@ -2,6 +2,11 @@
   type: file
   url: https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha/catppuccin-mocha-yellow.toml
   refreshPeriod: 168h
+  filter:
+    command: sed
+    args:
+      - -e
+      - '/^[[:space:]]*overall[[:space:]]*=[[:space:]]*{[[:space:]]*bg[[:space:]]*=.*}[[:space:]]*$/d'
 '.config/bat/themes/Catppuccin Mocha.tmTheme':
   type: file
   url: https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme
